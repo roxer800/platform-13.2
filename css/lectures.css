@@ -1,0 +1,110 @@
+body {
+  font-family: Firago Regular;
+}
+
+.lecture-name {
+  color: #f9f6f2;
+  background-color: #f74d62;
+  height: 70px;
+  padding-top: 10px;
+  padding-left: 35px;
+}
+.content-container {
+  margin-top: 70px;
+  text-align: center;
+}
+.sylabus {
+  width: 100%;
+  background-color: #22225b;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.sylabus-button {
+  background-color: transparent;
+  color: #f9f6f2;
+  border: none;
+  height: 80%;
+  margin-top: 5px;
+  padding: 0 15px;
+  border-radius: 25px;
+}
+.sylabus-button:hover {
+  background-color: #f74d62;
+  transition: 0.3s;
+}
+.sylabus-button-active {
+  background-color: #f74d62;
+}
+
+.about-course-wrapper {
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+}
+.about-course {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+}
+.about-lecturer {
+  margin-top: 50px;
+  display: none;
+}
+.lecture-info {
+  text-align: left;
+  font-size: 18px;
+}
+.lecturer-img {
+  width: 300px;
+  height: 310px;
+}
+.about-sylabus {
+  margin-top: 50px;
+  display: none;
+  text-align: left;
+}
+.syllabus {
+  position: relative;
+  margin-left: 30px;
+}
+
+.lecture {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.lecture::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 0;
+  bottom: -20px;
+  border-left: 2px dotted red;
+}
+
+.lecture::after {
+  content: attr(data-number);
+  position: absolute;
+  left: -41px;
+  top: 0;
+  transform: translateY(-50%);
+  background: white;
+  color: red;
+  border: 2px solid red;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* Ensure the line reaches the bottom of the last lecture */
+.lecture:last-child::before {
+  bottom: 0;
+}
