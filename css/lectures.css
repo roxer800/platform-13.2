@@ -1,6 +1,9 @@
 body {
   font-family: Firago Regular;
 }
+.bold {
+  font-weight: 600;
+}
 
 .lecture-name {
   color: #f9f6f2;
